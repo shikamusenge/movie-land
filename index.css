@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.card-image:hover .btns {
+  direction: flex;
+}
+#hoverbtn:hover #pages {
+  display: block;
+}

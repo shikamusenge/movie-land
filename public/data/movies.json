@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Ghost Couple",
+    "image": "./images/15.jpg",
+    "duration": "3hrs 2mins"
+  },
+  {
+    "name": "Skull island",
+    "image": "./images/16.jpg",
+    "duration": "2hrs 15mins"
+  },
+  {
+    "name": "Pirates of Sea",
+    "image": "./images/17.jpg",
+    "duration": "1hrs : 45mins"
+  },
+  {
+    "name": "The Dinosaur",
+    "image": "./images/18.jpg",
+    "duration": "1hrs : 44mins"
+  },
+  {
+    "name": "Mission Space",
+    "image": "./images/19.jpg",
+    "duration": "1hrs : 24mins"
+  },
+  { "name": "Zombie", "image": "./images/14.jpg", "duration": "1hrs : 48mins" }
+]
