@@ -23,6 +23,9 @@ function NavBar() {
           <Link to="/login">
             <button className="bg-[red] px-3 rounded-md">login</button>
           </Link>
+          <Link to="/signup">
+            <button className="bg-[red] px-3 rounded-md">Signup</button>
+          </Link>
         </div>
       </div>
     </>

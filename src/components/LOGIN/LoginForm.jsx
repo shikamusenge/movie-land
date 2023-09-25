@@ -1,9 +1,11 @@
 import React from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const usersData = JSON.parse(localStorage.getItem("usersData")) || [];
+  const navigate = useNavigate();
   return (
     <div className="flex w-screen h-screen items-center justify-center">
       <form className="border rounded-md  p-3 shadow-lg w-[20rem] ">
@@ -35,6 +37,9 @@ const LoginForm = () => {
             }}
           />
         </div>
+        <p className="mb-2 text-right">
+          <Link to="/signup">Create new Account</Link>
+        </p>
         <div>
           <input
             type="submit"
@@ -43,11 +48,16 @@ const LoginForm = () => {
             className="rounded-lg  h-10 w-full bg-[red] cursor-pointer"
             onClick={(e) => {
               e.preventDefault();
-              const newUser = JSON.stringify({
-                username: username,
-                loggedIn: true,
-              });
-              localStorage.setItem("userAcount", newUser);
+              const UserDeatail = usersData.filter(
+                (item) => item.username == username && item.password == password
+              );
+              if (UserDeatail.length > 0) {
+                UserDeatail.password = "*******";
+                localStorage.setItem("userAcount", JSON.stringify(UserDeatail));
+                navigate("/dashboard");
+              } else {
+                alert("invalid user name or password");
+              }
             }}
           />
         </div>

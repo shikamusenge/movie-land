@@ -34,7 +34,6 @@ const Footer = () => {
           <form>
             <input
               type="text"
-              value=""
               placeholder="Email"
               className="w-[20rem] mx-2 bg-zinc-800 rounded my-4 px-4 py-3 outline-none focus:outline-none cursor-text"
             />
@@ -44,7 +43,7 @@ const Footer = () => {
               </button>
             </p>
           </form>
-          <p className="statick h-[5rem] grid grid-cols-6 gap-1 w-fit items-center">
+          <div className="statick h-[5rem] grid grid-cols-6 gap-1 w-fit items-center">
             <div>Follow us:</div>
             <div>
               <i className="fa fa-facebook  bg-zinc-800 w-8 h-8 text-center content-center pt-2 tex-2xt rounded-full m-2 cursor-pointer hover:mt-[-1rem] hover:static delay-75 transition duration-[2s]  ease-in"></i>
@@ -61,12 +60,12 @@ const Footer = () => {
             <div>
               <i className="fa fa-youtube  bg-zinc-800 w-8 h-8 text-center content-center pt-2 tex-2xt rounded-full m-2 cursor-pointer hover:mt-[-1rem] hover:static delay-75 transition duration-[2s]  ease-in"></i>
             </div>
-          </p>
+          </div>
         </div>
       </div>
       <hr />
       <div className="md:flex gap-8">
-        <div className="w-3/6">
+        <div className="w-4/6">
           <p>Terms Of Use Privacy-Policy Blog FAQ Watch List</p>
           <p>
             &copy; 2023 <span className="text-red-600">STREAMIT</span>. All
@@ -77,8 +76,8 @@ const Footer = () => {
           </p>
         </div>
         <div className="w-2/6">
-          <p className="text- 2xl">Download Streamit Apps</p>
-          <p>
+          <p className="text- 2xl text-center">Download Streamit Apps</p>
+          <p className="flex justify-center">
             <img src="./images/google-play.png" alt="" />
             <img src="./images/apple.png" alt="" />
           </p>

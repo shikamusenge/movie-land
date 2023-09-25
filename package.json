@@ -16,7 +16,9 @@
   },
   "dependencies": {
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.46.2",
     "react-router": "^6.16.0",
-    "react-router-dom": "^6.16.0"
+    "react-router-dom": "^6.16.0",
+    "react-youtube": "^10.1.0"
   }
 }

@@ -36,6 +36,24 @@ function Home2() {
       </div>
       <div>
         <div className="grid grid-cols-2 mx-[2rem]">
+          <p className="font-bold text-2xl cursor-pointer text-white">Latest</p>
+          <p className="justify-right text-red-600 text-lg text-right font-semibold cursor-pointer">
+            view all
+          </p>
+        </div>
+        <div className="grid md:grid-cols-6 grid-cols-2 my-[3rem] h-[22rem] pl-[2rem]">
+          {latestMovies.map((item, i) => (
+            <MovieCard
+              key={i}
+              name={item.name}
+              image={item.image}
+              durition={item.duration}
+            />
+          ))}
+        </div>
+      </div>{" "}
+      <div>
+        <div className="grid grid-cols-2 mx-[2rem]">
           <p className="font-bold text-2xl cursor-pointer text-white">
             Suggested for you
           </p>
@@ -45,24 +63,6 @@ function Home2() {
         </div>
         <div className="grid md:grid-cols-6 h-[22rem] grid-cols-2 my-[3rem] pl-[2rem]">
           {suggestedMovies.map((item, i) => (
-            <MovieCard
-              key={i}
-              name={item.name}
-              image={item.image}
-              durition={item.duration}
-            />
-          ))}
-        </div>
-      </div>
-      <div>
-        <div className="grid grid-cols-2 mx-[2rem]">
-          <p className="font-bold text-2xl cursor-pointer text-white">Latest</p>
-          <p className="justify-right text-red-600 text-lg text-right font-semibold cursor-pointer">
-            view all
-          </p>
-        </div>
-        <div className="grid md:grid-cols-6 grid-cols-2 my-[3rem] h-[22rem] pl-[2rem]">
-          {latestMovies.map((item, i) => (
             <MovieCard
               key={i}
               name={item.name}

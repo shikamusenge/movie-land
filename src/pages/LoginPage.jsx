@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import LoginForm from "../components/LOGIN/LoginForm";
-import { Account } from "../Authentication/Auth";
+const Account = JSON.parse(localStorage.getItem("userAcount")) || [];
 function LoginPage() {
   const navigate = useNavigate();
   useEffect(() => {
-    Account.loggedIn && navigate("/dashboard");
+    Account.length > 0 && navigate("/dashboard");
   }, []);
   return (
     <>
