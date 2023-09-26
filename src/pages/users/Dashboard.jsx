@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import MovieCard from "../../components/Home/MovieCard";
+import { Processor } from "postcss";
 const Dashboard = () => {
   const navigate = useNavigate();
   const Account = JSON.parse(localStorage.getItem("userAcount")) || [];
@@ -16,8 +17,7 @@ const Dashboard = () => {
       const options = {
         headers: {
           accept: "application/json",
-          Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkYzUxMjcyMGFmNmY0ZDUzNmY2YmY2MDEyNzBlNTRlMiIsInN1YiI6IjY1MTEyZDI5MjZkYWMxMDE0ZTIyYTgxMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.8-09qdICI2J_-1b8VuFwZ8Vo1DuT2WSzMzI4MY2dUtk",
+          Authorization: import.meta.env.TokenBear,
         },
       };
       try {

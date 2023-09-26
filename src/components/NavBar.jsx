@@ -20,10 +20,15 @@ function NavBar() {
           <Link to="/">
             <li className="hover:text-red-700 cursor-pointer">Home</li>
           </Link>
-          <li className="hover:text-red-700 cursor-pointer">Feature</li>
-          <li className="hover:text-red-700 cursor-pointer">Pages</li>
-          <li className="hover:text-red-700 cursor-pointer">Blog</li>
-          <li className="hover:text-red-700 cursor-pointer">Shop</li>
+          <Link to="/about">
+            <li className="hover:text-red-700 cursor-pointer">About</li>
+          </Link>
+          <Link to="/contuct">
+            <li className="hover:text-red-700 cursor-pointer">Contuct Us</li>
+          </Link>
+          <Link to="/shop">
+            <li className="hover:text-red-700 cursor-pointer">Shop</li>
+          </Link>
         </ul>
         <div className="font-bold text-lg flex gap-10 justify-right">
           <i className="fa fa-search"></i>
@@ -31,7 +36,14 @@ function NavBar() {
             <>
               <i className="fa fa-user"></i>
               {loggedUser}
-              <i className="fa fa-sign-out" onClick={() => {}}></i>
+              <i
+                className="fa fa-sign-out cursor-pointer"
+                onClick={() => {
+                  localStorage.getItem("userAcount");
+                  setLogged(false);
+                  window.reload();
+                }}
+              ></i>
             </>
           )}
           {!logged && (
