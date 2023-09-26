@@ -11,6 +11,8 @@ import TaskPage from "./Challanges/TaskPage";
 import LoginPage from "./pages/LoginPage";
 import Dashboard from "./pages/users/Dashboard";
 import Signup from "./pages/Signup";
+import DetailPage from "./components/DetailPage";
+import Watches from "./pages/Watches";
 function App() {
   return (
     <div>
@@ -25,6 +27,8 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/details/:mid" element={<DetailPage />} />
+        <Route path="/watch/:id" element={<Watches />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
     </div>
