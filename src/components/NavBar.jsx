@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 function NavBar() {
   const [logged, setLogged] = useState(false);
   const [loggedUser, setLoggedUser] = useState("");
+
   useEffect(() => {
     const Account = JSON.parse(localStorage.getItem("userAcount")) || [];
     if (Account.length > 0) setLogged(true);
-    else setLoggedUser(Account[0].username);
-    console.log(loggedUser);
+    logged && setLoggedUser(Account[0].username);
+    logged && console.log(Account[0].username);
   }, []);
   return (
     <>
